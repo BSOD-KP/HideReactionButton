@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Reaction Button",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*","http://www.youtube.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "action": { },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png"
+  },
+  "host_permissions": ["http://*/*", "https://*/*"]
+}
